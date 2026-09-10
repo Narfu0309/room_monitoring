@@ -1,0 +1,7 @@
+format = "EspIdf"
+
+baudrate = 921600
+
+[idf_format_args]
+
+[flash]
