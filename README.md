@@ -36,11 +36,11 @@ SHT30でのみ動作済みです。
 
 デフォルトでは Windows 向けに設定されています。
 
-ビルドの作業ディレクトリは `D:\tmp` となっています。必要があれば [target-dir](.cargo\config.toml#L4) を変更してください。
+ビルドの作業ディレクトリは `D:\tmp` となっています。必要があれば [target-dir](.cargo/config.toml#L4) を変更してください。
 
 #### Windows以外
 
-[target-dir](.cargo\config.toml#L4) をコメントアウトする。
+[target-dir](.cargo/config.toml#L4) をコメントアウトする。
 
 もしくは任意の場所に変更する。
 
