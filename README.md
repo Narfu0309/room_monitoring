@@ -30,14 +30,28 @@ SHT30でのみ動作済みです。
 
 [main.rs](src/main.rs) の `TIME_OF_MEASUREMENT` を設定してください。
 
+### ビルドの設定
+
+#### Windows
+
+デフォルトでは Windows 向けに設定されています。
+
+ビルドの作業ディレクトリは `D:\tmp` となっています。必要があれば [target-dir](.cargo\config.toml#L4) を変更してください。
+
+#### Windows以外
+
+[target-dir](.cargo\config.toml#L4) をコメントアウトする。
+
+もしくは任意の場所に変更する。
+
 ## ビルド
+
+> [!NOTE]
+> Windows以外ではデフォルトの設定でビルドできません。
+> [こちら](#windows以外) を参照してください。
 
 `cargo build --release`
 > `--debug` は `--release` より圧縮率が低いだけです。
-
-## Windows以外でビルドする
-
-[target-dir](.cargo\config.toml#L4) をコメントアウトする。
 
 ## 実行
 
