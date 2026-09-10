@@ -1,6 +1,6 @@
 # 温室度通知Bot
 
-SHT30を使用して温湿度を計測し、Discord Webhook APIへ送信するシステムです。
+SHT30を使用して温湿度を計測し、指定の時間にDiscord Webhook APIへ送信するシステムです。
 
 ## 前提条件
 
@@ -11,6 +11,24 @@ SHT30を使用して温湿度を計測し、Discord Webhook APIへ送信する�
 ### APIキー
 
 `./webhook_url` にWebhookのURLを記載してください。
+
+> [!CAUTION]
+> **現状平文で保存している状態です。[.gitignore](.gitignore) や `webhook_url`、ビルド成果物などを厳重に管理してください。**
+
+### 回路
+
+SHT30でのみ動作済みです。
+初期値は次の通りです
+
+- SDA=21番ピン
+- SCL=22番ピン
+- I2Cアドレス=0x44
+
+設定は [main.rs](src/main.rs) にハードコーディングしてあります。
+
+### 計測及び通知時刻
+
+[main.rs](src/main.rs) の `TIME_OF_MEASUREMENT` を設定してください。
 
 ## ビルド
 
